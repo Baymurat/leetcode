@@ -14,7 +14,7 @@ export const displayLinkedList = <T>(head: Optional<ListNode<T>>) => {
   let result = ''
 
   while (current != null) {
-    result += `${current.data} -> `
+    result += `${current.val} -> `
     current = current.next
   }
 

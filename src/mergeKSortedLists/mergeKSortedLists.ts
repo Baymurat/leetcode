@@ -22,11 +22,11 @@ const varian1 = (lists: ListNode<number>[]): Optional<ListNode<number>> => {
 
     for (let i = 0; i < arrayLength; i++) {
       const next = mapOfHeads.get(i)
-      if (next == null || next.data == null) {
+      if (next == null || next.val == null) {
         continue
       }
 
-      if (min == null || min.data == null || next.data < min.data) {
+      if (min == null || min.val == null || next.val < min.val) {
         min = next
         minIndex = i
       }
@@ -49,12 +49,12 @@ const variant2 = (lists: Optional<ListNode<number>[]>): Optional<ListNode<number
     while (head) {
       let tail: Optional<ListNode<number | null>> = dummy
       let prevTail: Optional<ListNode<number | null>> = dummy
-      while (tail && tail.data! < head.data!) {
+      while (tail && tail.val! < head.val!) {
         prevTail = tail
         tail = tail.next
       }
 
-      prevTail.next = new ListNode(head.data, prevTail.next)
+      prevTail.next = new ListNode(head.val, prevTail.next)
       head = head.next as any
     }
   })
