@@ -1,6 +1,5 @@
 import { Optional } from "../../types";
 import { ListNode } from "../ListNode";
-import { displayLinkedList } from "../utils";
 
 export const reorderList = (head: Optional<ListNode<number>>): any => {
   let secondList = head
